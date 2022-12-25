@@ -57,7 +57,7 @@ if __name__ == "__main__":
         for quote in quotes:   # loop through the two stock data returned by server
             stock, bid_price, ask_price, price = getDataPoint(quote)
             prices[stock] = price
-            print("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
+            print("Quoted %s at (bid:%s, ask:%s, price:%.6f)" % (stock, bid_price, ask_price, price))
 
         # output ratio b/w prices of two stocks
-        print("Ratio %s" % getRatio(prices['ABC'], prices['DEF']))
+        print("Ratio %.6f" % getRatio(prices['ABC'], prices['DEF']))
